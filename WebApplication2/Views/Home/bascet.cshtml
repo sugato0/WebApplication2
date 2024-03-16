@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Buscet";
+}
+@model List<Products>
+<p>@ViewData["sale"]</p>
+<div >
+    @foreach(var i in Model){
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">@i.Name</h5>
+        
+        <p class="card-text">@i.description</p>
+        
+        <p class="card-text">@i.Price</p>
+        
+      </div>
+      <a href="bascet_delete/@i.Id">
+       <button type="button"  class="btn btn-primary">Удалить из корзины</button>
+       </a>
+    </div>
+   }
+</div>
